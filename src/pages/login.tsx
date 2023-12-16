@@ -1,5 +1,4 @@
 import { useLogin } from "@refinedev/core";
-
 import { useEffect, useRef } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -40,6 +39,8 @@ export const Login: React.FC = () => {
           theme: "filled_blue",
           size: "medium",
           type: "standard",
+          shape: "pill",
+          logo_alignment: "center"
         });
       } catch (error) {
         console.log(error);
@@ -61,7 +62,7 @@ export const Login: React.FC = () => {
     >
       <Box
         display="flex"
-        gap="14px"
+        gap="12px"
         justifyContent="center"
         flexDirection="column"
       >
@@ -91,24 +92,31 @@ export const Login: React.FC = () => {
         </button>
       
       </div>
-      
-        <h1 style={{
+      <div 
+      style={{
+        gap: "5px",
+        alignItems: "center",
+        justifyContent: "center"}}>
+      <h1 
+      style={{
+        fontWeight: 500, 
+         display: "flex",
           fontSize: "28px",
           alignItems: "center",
         justifyContent: "center"
       }}
-     >Hozir boshlang,</h1>
+     >Hozir boshlang</h1>
      <h2 
      style={{fontSize: "16px", 
      fontWeight: 200,
      alignItems: "center",
     justifyContent: "center",
-    paddingRight: "19px"
-
  }}
      >
      Iltimos, Malumotlaringizni kiriting
      </h2>
+      </div>
+       
      <form>
      <input 
      style={{
@@ -119,7 +127,7 @@ export const Login: React.FC = () => {
       borderRadius: "10px",
       color: "gray",
       background: "FAFAFA",
-      border: "1.8 px solid gray"
+      border: "1.2px solid  #D1D1D6"
     }}
      type="text" placeholder="Ism..."/>
      </form>
@@ -134,7 +142,7 @@ export const Login: React.FC = () => {
       borderRadius: "10px",
       color: "gray",
       background: "FAFAFA",
-      border: "1.8 px solid gray"
+      border: "1.2px solid  #D1D1D6"
     }}
      type="email" placeholder="Electron pochta..."/>
      </form>
@@ -147,8 +155,9 @@ export const Login: React.FC = () => {
       height: "38px",
       borderRadius: "10px",
       color: "gray",
-      background: "FAFAFA",
-      border: "1.8 px solid gray"
+      background: "#FAFAFA",
+      border: "1.2px solid  #D1D1D6"
+  
     }}
      type="password" placeholder="Parol..."/>
      </form>
@@ -162,11 +171,21 @@ export const Login: React.FC = () => {
         }}
         >Regestratsiya</button>
 
-
+  
    
-        <Typography align="center">
-        yoki 
-        </Typography>
+<Typography 
+        align="center"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "10px 0",
+        }}
+      >
+        <span style={{ flex: 1, borderBottom: "1px solid #D1D1D6" }}></span>
+        <span style={{ margin: "0 10px ",  color: "#D1D1D6"}}>Yoki</span>
+        <span style={{ flex: 1, borderBottom: "1px solid #D1D1D6" }}></span>
+      </Typography>
         
 
         <GoogleButton/>
